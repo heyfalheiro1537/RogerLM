@@ -8,7 +8,7 @@ numpy>=1.21.0
 
 # Optional but recommended
 faiss-cpu>=1.7.0  # For better vector search performance
-python-docx>=0.8.11  # For Word document support
+python-docx>=0.8.11  
 
 # Development dependencies (optional)
 pyinstaller>=5.0.0  # For creating executables

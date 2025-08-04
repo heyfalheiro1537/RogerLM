@@ -1,17 +1,17 @@
 import logging
 from datetime import datetime
-from config import Config
+from models.config import Config
 
 
 class Logger:
     def __init__(self, config: Config):
         self.config = config
-        self.setup_logging(config)
+        self.setup_logging()
 
-    def setup_logging(config: Config):
+    def setup_logging(self):
         """Setup logging configuration"""
         log_file = (
-            config.logs_path / f"assistant_{datetime.now().strftime('%Y%m%d')}.log"
+            self.config.logs_path / f"assistant_{datetime.now().strftime('%Y%m%d')}.log"
         )
         logging.basicConfig(
             level=logging.INFO,

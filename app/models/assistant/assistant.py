@@ -1,8 +1,7 @@
 import os
 import sys
 from typing import List, Dict
-from config import Config
-from connection import check_ollama_connection
+from models.config import Config
 
 try:
     import chromadb

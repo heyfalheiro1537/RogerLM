@@ -1,5 +1,5 @@
 import os
-from config import Config
+from models.config import Config
 
 try:
     import requests

@@ -2,7 +2,7 @@ import os
 import sqlite3
 import hashlib
 from pathlib import Path
-from config import Config
+from models.config import Config
 
 # Core dependencies
 try:
@@ -21,14 +21,15 @@ except ImportError:
     os.system("pip install sentence-transformers")
     from sentence_transformers import SentenceTransformer
 
+# Todo fix imports
 try:
     from langchain.text_splitter import RecursiveCharacterTextSplitter
-    from langchain.document_loaders import TextLoader, PyPDFLoader
+    from langchain_community.document_loaders import TextLoader, PyPDFLoader
 except ImportError:
     print("LangChain not found. Installing...")
     os.system("pip install langchain pypdf")
     from langchain.text_splitter import RecursiveCharacterTextSplitter
-    from langchain.document_loaders import TextLoader, PyPDFLoader
+    from langchain_community.document_loaders import TextLoader, PyPDFLoader
 
 
 # Configuration

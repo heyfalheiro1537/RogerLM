@@ -12,6 +12,7 @@ from pathlib import Path
 from models.logging import Logger
 from models.config import Config
 from models.document_processor import DocumentProcessor
+from models.assistant import Assistant, check_ollama_connection
 
 
 def main():
@@ -98,7 +99,7 @@ def main():
 
     # Initialize assistant
     try:
-        assistant = LLaMAAssistant(config)
+        assistant = Assistant(config)
     except SystemExit:
         return
 
